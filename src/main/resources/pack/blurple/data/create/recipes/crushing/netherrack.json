@@ -1,0 +1,1 @@
+{"type":"create:crushing","ingredients":[{"item":"betternether:magma_flower"}],"results":[{"item":"create:cinder_flour"},{"item":"create:cinder_flour","chance":0.25}],"processingTime":250}

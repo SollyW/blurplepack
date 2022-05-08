@@ -1,0 +1,19 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    " T ",
+    "TET",
+    " T "
+  ],
+  "key": {
+    "T": {
+      "item": "betterend:thallasium_forged_plate"
+    },
+    "E": {
+      "item": "minecraft:chainmail_leggings"
+    }
+  },
+  "result": {
+    "item": "betterend:thallasium_leggings"
+  }
+}

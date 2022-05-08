@@ -1,0 +1,26 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "AAA",
+    "#C#",
+    "VVV"
+  ],
+  "key": {
+    "A": {
+      "item": "betterend:ender_shard"
+    },
+    "C": {
+      "item": "simpleteleporters:ender_shard"
+    },
+    "#": {
+      "tag": "c:stone"
+    },
+    "V": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "result": {
+    "item": "simpleteleporters:teleporter",
+    "count": 1
+  }
+}

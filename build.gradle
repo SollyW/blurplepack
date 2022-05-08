@@ -1,0 +1,79 @@
+//file:noinspection All
+plugins {
+    id "java-library"
+    id "fabric-loom" version "0.12-SNAPSHOT"
+}
+
+archivesBaseName = "blurplemod"
+group = "com.projectblurple"
+version = project.blurplemod_version
+
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
+
+repositories {
+    mavenLocal()
+    maven { url "https://api.modrinth.com/maven" }
+    maven { url "https://maven.fabricmc.net" }
+    maven { url "https://maven.parchmentmc.org" }
+    maven { url "https://maven.tterrag.com/" }
+    maven { url "https://storage.googleapis.com/devan-maven/" }
+    maven { url "https://aperlambda.github.io/maven" }
+    maven { url "https://maven.kotlindiscord.com/repository/terraformers/" }
+    maven { url "https://mvn.devos.one/releases/" }
+    maven { url "https://mvn.devos.one/snapshots/" }
+    maven { url "https://maven.cafeteria.dev" }
+    maven { url "https://jitpack.io" }
+    maven { url "https://www.cursemaven.com" }
+    maven { url "https://maven.shedaniel.me" }
+    maven { url "https://maven.blamejared.com" }
+    maven { url "https://maven.jamieswhiteshirt.com/libs-release" }
+    maven { url "https://maven.terraformersmc.com/" }
+    maven { url "https://ladysnake.jfrog.io/artifactory/mods" }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+
+    modCompileOnly "curse.maven:auth-me-356643:${project.authme_version}"
+    modCompileOnly "curse.maven:bclib-311377:${project.bclib_version}"
+    modCompileOnly "curse.maven:bedrockify-403858:${project.bedrockify_version}"
+    modCompileOnly "curse.maven:betterend-413596:${project.betterend_version}"
+    modCompileOnly "curse.maven:betternether-311377:${project.betternether_version}"
+    modCompileOnly "com.sollyw:biginv:${project.biginv_version}"
+    modCompileOnly "curse.maven:oh-the-biomes-youll-go-fabric-391378:${project.byg_version}"
+    modCompileOnly "curse.maven:charm-318872:${project.charm_version}"
+    modCompileOnly "com.simibubi:Create-mc1.18-fabric-dev:${project.create_version}"
+    modCompileOnly "net.fabricmc.fabric-api:fabric-api:${project.fapi_version}"
+    modCompileOnly "curse.maven:indium-459496:${project.indium_version}"
+    modCompileOnly "curse.maven:irisshaders-455508:${project.iris_version}"
+    modCompileOnly "curse.maven:midnightlib-488090:${project.midnightlib_version}"
+    modCompileOnly "curse.maven:patchouli-fabric-393236:${project.patchouli_version}"
+    modCompileOnly "me.shedaniel:RoughlyEnoughItems-runtime-fabric:${project.rei_version}"
+    modCompileOnly "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}"
+    modCompileOnly "curse.maven:simple-teleporters-fabric-334011:${project.simpleteleporters_version}"
+    modCompileOnly "curse.maven:sodium-394468:${project.sodium_version}"
+    modCompileOnly "curse.maven:terrablender-fabric-394468:${project.terrablender_version}"
+    modCompileOnly "curse.maven:villagerconfig-400741:${project.villagerconfig_version}"
+    modCompileOnly "curse.maven:wandering-collector-443476:${project.wanderingcollector_version}"
+    modCompileOnly "curse.maven:fabric-waystones-410902:${project.waystones_version}"
+    modCompileOnly "curse.maven:yungs-bridges-fabric-590988:${project.yungsbridges_version}"
+}
+
+processResources {
+    inputs.property "version", project.version
+
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.release = 17
+}
+
+java {
+    withSourcesJar()
+}

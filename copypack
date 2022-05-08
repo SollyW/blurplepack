@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm ~/.local/share/multimc/instances/Blurple/.minecraft/resourcepacks/blurple -r
+cp pack/resourcepacks/blurple ~/.local/share/multimc/instances/Blurple/.minecraft/resourcepacks/ -r

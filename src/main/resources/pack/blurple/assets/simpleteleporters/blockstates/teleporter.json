@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "on=true": {
+      "model": "simpleteleporters:block/teleporter"
+    },
+    "on=false": {
+      "model": "simpleteleporters:block/teleporter_inactive"
+    }
+  }
+}

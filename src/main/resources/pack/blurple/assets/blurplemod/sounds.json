@@ -1,0 +1,90 @@
+{
+  "music_disc.darkness": {
+    "sounds": [
+      {
+        "name": "blurplemod:records/darkness",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.dog": {
+    "sounds": [
+      {
+        "name": "blurplemod:records/dog",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.droopy_likes_ricochet": {
+    "sounds": [
+      {
+        "name": "blurplemod:records/droopy_likes_ricochet",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.droopy_likes_your_face": {
+    "sounds": [
+      {
+        "name": "blurplemod:records/droopy_likes_your_face",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.elevent": {
+    "sounds": [
+      {
+        "name": "blurplemod:records/elevent",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.flake": {
+    "sounds": [
+      {
+        "name": "blurplemod:records/flake",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.ki": {
+    "sounds": [
+      {
+        "name": "blurplemod:records/ki",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.kyoto": {
+    "sounds": [
+      {
+        "name": "blurplemod:records/kyoto",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.missed_call": {
+    "sounds": [
+      {
+        "name": "blurplemod:records/missed_call",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.neitherside": {
+    "sounds": [
+      {
+        "name": "blurplemod:records/neitherside",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.uwu": {
+    "sounds": [
+      {
+        "name": "blurplemod:records/uwu",
+        "stream": true
+      }
+    ]
+  }
+}

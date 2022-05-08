@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    " i ",
+    "iii"
+  ],
+  "key": {
+    "I": {
+      "item": "betterend:aeternium_block"
+    },
+    "i": {
+      "item": "betterend:aeternium_ingot"
+    }
+  },
+  "result": {
+    "item": "betterend:aeternium_anvil"
+  }
+}

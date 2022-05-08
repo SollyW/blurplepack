@@ -1,0 +1,11 @@
+#!/bin/bash
+
+./gradlew build
+mv ~/.local/share/multimc/instances/Blurple/.minecraft/saves ~/.local/share/multimc/instances/Blurple/saves 
+#mv ~/.local/share/multimc/instances/Blurple/.minecraft/dashloader-cache ~/.local/share/multimc/instances/Blurple/dashloader-cache
+rm ~/.local/share/multimc/instances/Blurple/.minecraft/* -r
+mv ~/.local/share/multimc/instances/Blurple/saves ~/.local/share/multimc/instances/Blurple/.minecraft/saves
+#mv ~/.local/share/multimc/instances/Blurple/dashloader-cache ~/.local/share/multimc/instances/Blurple/.minecraft/dashloader-cache
+cp pack/* ~/.local/share/multimc/instances/Blurple/.minecraft/ -r
+cp build/libs/blurplemod-0.1.0.jar ~/.local/share/multimc/instances/Blurple/.minecraft/mods/
+multimc -l Blurple

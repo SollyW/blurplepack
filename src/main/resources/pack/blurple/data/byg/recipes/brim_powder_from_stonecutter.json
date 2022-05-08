@@ -1,0 +1,18 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "byg:brimstone"
+    }
+  ],
+  "results": [
+    {
+      "item": "byg:brim_powder"
+    },
+    {
+      "item": "byg:brim_powder",
+      "chance": 0.5
+    }
+  ],
+  "processingTime": 250
+}

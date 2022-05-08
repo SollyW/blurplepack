@@ -1,0 +1,19 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "minecraft:quartz"
+    },
+    {
+      "item": "betternether:nether_ruby"
+    },
+    {
+      "item": "byg:brim_powder"
+    }
+  ],
+  "results": [
+    {
+      "item": "create:rose_quartz"
+    }
+  ]
+}

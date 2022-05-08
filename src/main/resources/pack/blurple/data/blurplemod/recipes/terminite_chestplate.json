@@ -1,0 +1,28 @@
+{
+  "type": "create:mechanical_crafting",
+  "pattern": [
+    "TTTTT",
+    "TTSTT",
+    "THEHT",
+    "TSHST",
+    "TTTTT"
+  ],
+  "key": {
+    "T": {
+      "item": "betterend:terminite_forged_plate"
+    },
+    "S": {
+      "item": "betterend:silk_fiber"
+    },
+    "H": {
+      "item": "minecraft:rabbit_hide"
+    },
+    "E": {
+      "item": "betterend:thallasium_chestplate"
+    }
+  },
+  "result": {
+    "item": "betterend:terminite_chestplate"
+  },
+  "acceptMirrored": false
+}

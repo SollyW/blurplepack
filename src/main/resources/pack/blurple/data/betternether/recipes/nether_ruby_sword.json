@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:diamond_sword"
+  },
+  "addition": {
+    "item": "betternether:nether_ruby_block"
+  },
+  "result": {
+    "item": "betternether:nether_ruby_sword"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#A#",
+    "#E#",
+    "VOV"
+  ],
+  "key": {
+    "#": {
+      "tag": "c:stone"
+    },
+    "A": {
+      "item": "waystones:abyss_watcher"
+    },
+    "E": {
+      "item": "simpleteleporters:teleporter"
+    },
+    "O": {
+      "item": "betterend:thallasium_block"
+    },
+    "V": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "result": {
+    "item": "waystones:waystone",
+    "count": 1
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "create:mechanical_crafting",
+  "pattern": [
+    "     ",
+    " TTT ",
+    "TDEDT",
+    " TTT ",
+    "    "
+  ],
+  "key": {
+    "T": {
+      "item": "betterend:terminite_forged_plate"
+    },
+    "D": {
+      "item": "betterend:ender_dust"
+    },
+    "E": {
+      "item": "betterend:thallasium_hoe"
+    }
+  },
+  "result": {
+    "item": "betterend:terminite_hoe"
+  },
+  "acceptMirrored": false
+}

@@ -1,0 +1,25 @@
+{
+  "type": "create:mechanical_crafting",
+  "pattern": [
+    " T T ",
+    "TAAAT",
+    " AEA ",
+    "TAAAT",
+    " T T "
+  ],
+  "key": {
+    "T": {
+      "item": "betterend:terminite_forged_plate"
+    },
+    "A": {
+      "item": "betterend:aeternium_forged_plate"
+    },
+    "E": {
+      "item": "betterend:terminite_boots"
+    }
+  },
+  "result": {
+    "item": "betterend:aeternium_boots"
+  },
+  "acceptMirrored": false
+}

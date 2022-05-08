@@ -1,0 +1,28 @@
+{
+  "type": "create:mechanical_crafting",
+  "pattern": [
+    "TTTTT",
+    "TSHST",
+    "THEHT",
+    "THSHT",
+    "TTTTT"
+  ],
+  "key": {
+    "T": {
+      "item": "betterend:terminite_forged_plate"
+    },
+    "S": {
+      "item": "betterend:silk_fiber"
+    },
+    "H": {
+      "item": "minecraft:rabbit_hide"
+    },
+    "E": {
+      "item": "betterend:thallasium_leggings"
+    }
+  },
+  "result": {
+    "item": "betterend:terminite_leggings"
+  },
+  "acceptMirrored": false
+}

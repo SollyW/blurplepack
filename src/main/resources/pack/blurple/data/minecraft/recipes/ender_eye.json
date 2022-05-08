@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "waystones:local_void"
+    },
+    {
+      "item": "betterend:nether_ruby"
+    },
+    {
+      "item": "byg:emeraldite_shards"
+    },
+    {
+      "item": "byg:subzero_crystal_shard"
+    },
+    {
+      "item": "byg:raw_pendorite"
+    },
+    {
+      "item": "minecraft:netherite_scrap"
+    },
+    {
+      "item": "minecraft:nether_quartz"
+    },
+    {
+      "item": "minecraft:gold_nugget"
+    }
+  ],
+  "result": {
+    "item": "minecraft:ender_eye"
+  }
+}
