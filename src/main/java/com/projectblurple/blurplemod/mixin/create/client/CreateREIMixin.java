@@ -20,4 +20,12 @@ public abstract class CreateREIMixin {
     private static void getNetworkHandler(Consumer<Recipe<?>> consumer, RecipeType<?> type, CallbackInfo ci) {
         if (MinecraftClient.getInstance().getNetworkHandler() == null) ci.cancel();
     }
+
+    @Inject(method = "consumeAllRecipes",
+            at = @At("HEAD"),
+            cancellable = true,
+            remap = false)
+    private static void consumeAllRecipes(Consumer<Recipe<?>> consumer, CallbackInfo ci) {
+        if (MinecraftClient.getInstance().world == null) ci.cancel();
+    }
 }
