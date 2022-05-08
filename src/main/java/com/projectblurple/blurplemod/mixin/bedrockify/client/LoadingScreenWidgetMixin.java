@@ -15,8 +15,7 @@ import java.util.Random;
 @Mixin(LoadingScreenWidget.class)
 public abstract class LoadingScreenWidgetMixin {
     private static final String[] BLURPLE_TIPS = {
-            "uwu",
-            "ill put something here soon"
+            "Welcome to PBMC 2022!"
     };
 
     @Shadow

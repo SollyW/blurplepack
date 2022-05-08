@@ -40,7 +40,7 @@ public abstract class TitleScreenMixin extends Screen {
     private static final Identifier BRUSH_TEXTURE = new Identifier("blurplemod", "textures/gui/title/brush.png");
     private static final ServerInfo PBMC_SERVER_INFO = new ServerInfo(
             "PBMC",
-            "192.169.82.150:19132",
+            "192.169.82.150:25569",
             false);
 
     static {

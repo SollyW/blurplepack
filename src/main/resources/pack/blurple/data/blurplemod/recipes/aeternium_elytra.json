@@ -1,21 +1,16 @@
 {
   "type": "crafting_shapeless",
-  "pattern": [
-    "CES",
-    "   ",
-    "   "
-  ],
-  "key": {
-    "C": {
+  "ingredients": [
+    {
       "item": "betterend:aeternium_chestplate"
     },
-    "E": {
+    {
       "item": "minecraft:elytra"
     },
-    "S": {
+    {
       "item": "betterend:aeternium_forged_plate"
     }
-  },
+  ],
   "result": {
     "item": "betterend:elytra_armored"
   }

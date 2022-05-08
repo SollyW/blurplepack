@@ -12,8 +12,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 public abstract class IrisMixin {
     @Redirect(method = "onEarlyInitialize",
             at = @At(value = "INVOKE",
-                    target = "Lnet/fabricmc/fabric/api/client/keybinding/v1/KeyBindingHelper;registerKeyBinding(Lnet/minecraft/client/option/KeyBinding;)Lnet/minecraft/client/option/KeyBinding;"),
-            remap = false)
+                    target = "Lnet/fabricmc/fabric/api/client/keybinding/v1/KeyBindingHelper;registerKeyBinding(Lnet/minecraft/client/option/KeyBinding;)Lnet/minecraft/client/option/KeyBinding;"))
     private KeyBinding registerKeyBinding(KeyBinding keyBinding) {
         KeyBinding newBinding = new KeyBinding(keyBinding.getTranslationKey(), InputUtil.UNKNOWN_KEY.getCode(), KeyBinding.MISC_CATEGORY);
         if (keyBinding.getTranslationKey().equals("iris.keybind.toggleShaders")){
