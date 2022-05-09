@@ -30,6 +30,7 @@ repositories {
     maven { url "https://maven.jamieswhiteshirt.com/libs-release" }
     maven { url "https://maven.terraformersmc.com/" }
     maven { url "https://ladysnake.jfrog.io/artifactory/mods" }
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
 }
 
 dependencies {
@@ -47,6 +48,7 @@ dependencies {
     modCompileOnly "curse.maven:charm-318872:${project.charm_version}"
     modCompileOnly "com.simibubi:Create-mc1.18-fabric-dev:${project.create_version}"
     modCompileOnly "net.fabricmc.fabric-api:fabric-api:${project.fapi_version}"
+    modCompileOnly "me.lucko:fabric-permissions-api:0.1-SNAPSHOT"
     modCompileOnly "curse.maven:indium-459496:${project.indium_version}"
     modCompileOnly "curse.maven:irisshaders-455508:${project.iris_version}"
     modCompileOnly "curse.maven:midnightlib-488090:${project.midnightlib_version}"
@@ -57,7 +59,8 @@ dependencies {
     modCompileOnly "curse.maven:sodium-394468:${project.sodium_version}"
     modCompileOnly "curse.maven:terrablender-fabric-394468:${project.terrablender_version}"
     modCompileOnly "curse.maven:villagerconfig-400741:${project.villagerconfig_version}"
-    modCompileOnly "curse.maven:wandering-collector-443476:${project.wanderingcollector_version}"
+    modCompileOnly "curse.maven:villagerconfig-400741:${project.villagerconfig_version}"
+    modCompileOnly "curse.maven:vanish-424123:${project.vanish_version}"
     modCompileOnly "curse.maven:fabric-waystones-410902:${project.waystones_version}"
     modCompileOnly "curse.maven:yungs-bridges-fabric-590988:${project.yungsbridges_version}"
 }

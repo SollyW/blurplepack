@@ -4,7 +4,6 @@ import com.projectblurple.blurplemod.content.item.BlurpleItems;
 import com.projectblurple.blurplemod.content.particle.BlurpleParticleTypes;
 import com.projectblurple.blurplemod.content.sound.BlurpleSoundEvents;
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.client.resource.ClientBuiltinResourcePackProvider;
 import net.minecraft.util.Identifier;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
