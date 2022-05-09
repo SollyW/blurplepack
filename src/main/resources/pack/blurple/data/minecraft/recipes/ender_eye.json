@@ -5,7 +5,7 @@
       "item": "minecraft:ender_pearl"
     },
     {
-      "item": "waystones:local_void"
+      "item": "betterend:terminite_hoe_head"
     },
     {
       "item": "betternether:nether_ruby"
@@ -23,10 +23,10 @@
       "item": "minecraft:netherite_scrap"
     },
     {
-      "item": "minecraft:nether_quartz"
+      "item": "minecraft:quartz"
     },
     {
-      "item": "minecraft:gold_nugget"
+      "item": "byg:embur_gel_ball"
     }
   ],
   "result": {
