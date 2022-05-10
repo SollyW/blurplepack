@@ -12,6 +12,6 @@ public abstract class EnderDragonFightMixin {
                     target = "Lnet/minecraft/entity/boss/dragon/EnderDragonFight;previouslyKilled:Z",
                     ordinal = 0))
     private boolean getPreviouslyKilled(EnderDragonFight instance) {
-        return false;
+        return instance.hasPreviouslyKilled();
     }
 }

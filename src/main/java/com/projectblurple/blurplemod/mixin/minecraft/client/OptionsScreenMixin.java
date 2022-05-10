@@ -63,17 +63,6 @@ public abstract class OptionsScreenMixin extends Screen {
     @Redirect(method = "init",
             slice = @Slice(
                     from = @At(value = "CONSTANT",
-                            args = "stringValue=options.resourcepack")),
-            at = @At(value = "INVOKE",
-                    target = "Lnet/minecraft/client/gui/screen/option/OptionsScreen;addDrawableChild(Lnet/minecraft/client/gui/Element;)Lnet/minecraft/client/gui/Element;",
-                    ordinal = 0))
-    private Element resourcePacksScreen(OptionsScreen instance, Element element) {
-        return element;
-    }
-
-    @Redirect(method = "init",
-            slice = @Slice(
-                    from = @At(value = "CONSTANT",
                             args = "stringValue=options.accessibility.title")),
             at = @At(value = "INVOKE",
                     target = "Lnet/minecraft/client/gui/screen/option/OptionsScreen;addDrawableChild(Lnet/minecraft/client/gui/Element;)Lnet/minecraft/client/gui/Element;",
