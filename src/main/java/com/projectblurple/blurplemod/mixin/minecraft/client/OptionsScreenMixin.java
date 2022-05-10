@@ -12,10 +12,7 @@ import net.minecraft.text.Text;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.Redirect;
-import org.spongepowered.asm.mixin.injection.Slice;
+import org.spongepowered.asm.mixin.injection.*;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(value = OptionsScreen.class, priority = 999)
@@ -58,6 +55,18 @@ public abstract class OptionsScreenMixin extends Screen {
                     ordinal = 0))
     private Element languageScreen(OptionsScreen instance, Element element) {
         return element;
+    }
+
+    @ModifyArg(method = "init",
+            slice = @Slice(
+                    from = @At(value = "CONSTANT",
+                            args = "stringValue=options.resourcepack")),
+            at = @At(value = "INVOKE",
+                    target = "Lnet/minecraft/client/gui/widget/ButtonWidget;<init>(IIIILnet/minecraft/text/Text;Lnet/minecraft/client/gui/widget/ButtonWidget$PressAction;)V",
+                    ordinal = 0),
+            index = 1)
+    private int modifyY(int y) {
+        return y - 24;
     }
 
     @Redirect(method = "init",
