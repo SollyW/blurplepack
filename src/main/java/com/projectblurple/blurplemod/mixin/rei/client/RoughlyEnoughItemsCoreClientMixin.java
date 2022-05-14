@@ -1,5 +1,6 @@
 package com.projectblurple.blurplemod.mixin.rei.client;
 
+import com.projectblurple.blurplemod.BlurpleMod;
 import me.shedaniel.rei.RoughlyEnoughItemsCore;
 import me.shedaniel.rei.RoughlyEnoughItemsCoreClient;
 import me.shedaniel.rei.api.client.config.ConfigObject;
@@ -27,9 +28,11 @@ public abstract class RoughlyEnoughItemsCoreClientMixin {
                     target = "Lme/shedaniel/rei/RoughlyEnoughItemsCore;_reloadPlugins(Lme/shedaniel/rei/api/common/registry/ReloadStage;)V"),
             remap = false)
     private static void _reloadPlugins(ReloadStage reloadStage) {
+        BlurpleMod.LOGGER.warn("REI connection error: ");
         try {
             RoughlyEnoughItemsCore._reloadPlugins(reloadStage);
-        } catch (Exception ignored) {
+        } catch (Exception e) {
+            BlurpleMod.LOGGER.warn("REI connection error: " + e.getMessage());
             MinecraftClient.getInstance().setScreen(new DisconnectedScreen(
                     MinecraftClient.getInstance().currentScreen,
                     new LiteralText("Disconnected"),

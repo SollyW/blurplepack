@@ -5,10 +5,18 @@ import com.projectblurple.blurplemod.content.particle.BlurpleParticleTypes;
 import com.projectblurple.blurplemod.content.sound.BlurpleSoundEvents;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v1.CommandRegistrationCallback;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.server.world.ChunkTicketType;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.ChunkPos;
+import net.minecraft.util.math.Vec3d;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.Optional;
 import java.util.UUID;
 
 import static net.minecraft.server.command.CommandManager.literal;
@@ -28,10 +36,46 @@ public class BlurpleMod implements ModInitializer {
 
 		CommandRegistrationCallback.EVENT.register((dispatcher, dedicated) ->
 				dispatcher.register(literal("home").executes(context -> {
-					context.getSource()
-							.getServer()
-							.getPlayerManager()
-							.respawnPlayer(context.getSource().getPlayer(), true);
+					ServerPlayerEntity player = context.getSource().getPlayer();
+
+					ServerWorld world = context.getSource().getServer().getWorld(player.getSpawnPointDimension());
+					BlockPos pos = player.getSpawnPointPosition();
+
+					Optional<Vec3d> maybeRespawnPosition = world != null && pos != null
+							? PlayerEntity.findRespawnPosition(world, pos, player.getSpawnAngle(),
+									true, true)
+							: Optional.empty();
+
+					ServerWorld respawnWorld = maybeRespawnPosition.isPresent()
+							? world
+							: context.getSource().getServer().getOverworld();
+
+					Vec3d respawnPosition = maybeRespawnPosition.isPresent()
+							? maybeRespawnPosition.get()
+							: Vec3d.ofCenter(respawnWorld.getSpawnPos());
+
+					ChunkPos chunkPos = new ChunkPos(new BlockPos(respawnPosition));
+					respawnWorld.getChunkManager().addTicket(ChunkTicketType.POST_TELEPORT,
+							chunkPos, 1, player.getId());
+					player.stopRiding();
+					if (player.isSleeping()) {
+						player.wakeUp(true, true);
+					}
+					if (world == player.world) {
+						player.networkHandler.requestTeleport(respawnPosition.getX(),
+								respawnPosition.getY(),
+								respawnPosition.getZ(),
+								player.getYaw(),
+								player.getPitch());
+					} else {
+						player.teleport(world,
+								respawnPosition.getX(),
+								respawnPosition.getY(),
+								respawnPosition.getZ(),
+								player.getYaw(),
+								player.getPitch());
+					}
+
 					return 1;
 		})));
 	}
