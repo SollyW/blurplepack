@@ -27,6 +27,7 @@
     "betternether.BNToolMaterialMixin",
     "betternether.CityFeatureMixin",
     "betternether.CityPieceMixin",
+    "betternether.NetherBlocksMixin",
     "betternether.NetherEquipmentMixin",
     "betternether.NetherWoodenMaterialMixin",
     "byg.BYGArmorMaterialMixin",

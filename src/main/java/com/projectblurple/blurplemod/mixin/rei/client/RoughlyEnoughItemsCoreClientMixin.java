@@ -4,6 +4,9 @@ import me.shedaniel.rei.RoughlyEnoughItemsCore;
 import me.shedaniel.rei.RoughlyEnoughItemsCoreClient;
 import me.shedaniel.rei.api.client.config.ConfigObject;
 import me.shedaniel.rei.api.common.registry.ReloadStage;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.gui.screen.DisconnectedScreen;
+import net.minecraft.text.LiteralText;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
@@ -27,6 +30,10 @@ public abstract class RoughlyEnoughItemsCoreClientMixin {
         try {
             RoughlyEnoughItemsCore._reloadPlugins(reloadStage);
         } catch (Exception ignored) {
+            MinecraftClient.getInstance().setScreen(new DisconnectedScreen(
+                    MinecraftClient.getInstance().currentScreen,
+                    new LiteralText("Disconnected"),
+                    new LiteralText("An error ocurred whilst connecting. Try restarting your client.")));
         }
     }
 }
