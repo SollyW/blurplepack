@@ -10,7 +10,6 @@ import wraith.waystones.screen.UniversalWaystoneScreenHandler;
 public abstract class UniversalWaystoneScreenHandlerMixin implements ScreenHandlerExt {
     @SoftOverride
     public BigInvModInfo biginv$getModInfo() {
-        System.out.println("e");
         return BigInvModInfo.EMULATE;
     }
 }

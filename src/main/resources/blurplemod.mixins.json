@@ -98,7 +98,6 @@
     "minecraft.client.RecipeToastMixin",
     "minecraft.client.SoundOptionsScreenMixin",
     "minecraft.client.TitleScreenMixin",
-    "minecraft.client.WindowMixin",
     "rei.client.ConfigObjectImplMixin",
     "rei.client.EntryListWidgetMixin",
     "rei.client.RoughlyEnoughItemsCoreClientMixin",
