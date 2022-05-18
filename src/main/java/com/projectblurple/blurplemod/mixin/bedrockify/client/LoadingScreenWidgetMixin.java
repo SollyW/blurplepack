@@ -15,7 +15,11 @@ import java.util.Random;
 @Mixin(LoadingScreenWidget.class)
 public abstract class LoadingScreenWidgetMixin {
     private static final String[] BLURPLE_TIPS = {
-            "Welcome to PBMC 2022!"
+            "You can use /locatebiome to quickly locate biomes",
+            "Chocolate remains in your inventory when you die",
+            "You can use waystones to quickly travel between distant locations",
+            "Lava is bad for you",
+            "I need more things to put here"
     };
 
     @Shadow

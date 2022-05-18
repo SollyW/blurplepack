@@ -38,6 +38,7 @@
     "minecraft.AdvancementManagerMixin",
     "minecraft.ArmorMaterialsMixin",
     "minecraft.DamageEnchantmentMixin",
+    "minecraft.EnchantingTableBlockMixin",
     "minecraft.EnchantmentHelperMixin",
     "minecraft.EnderDragonEntityMixin",
     "minecraft.EnderDragonFightMixin",
